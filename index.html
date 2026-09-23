@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+
+            <h1>Weather Dashboard</h1>
+
+            <button id="themeBtn">
+                🌙 Dark
+            </button>
+
+        </header>
+          <!-- Search -->
+        <section class="search-section">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name..."
+                autocomplete="off"
+            >
+            <button id="searchBtn">
+                Search
+            </button>
+        </section>
+
+
+        <!-- Weather -->
+        <section id="weatherCard" class="weather-card"></section>
+        <section class="forecast-section">
+
+    <h2>5-Day Forecast</h2>
+
+    <div id="forecast"></div>
+
+    </section>
+       
+        <!-- Favorites -->
+        <section class="favorites-section">
+
+            <h2>⭐ Favorites</h2>
+            <div id="favoritesList" class="favorites-list"></div>
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
