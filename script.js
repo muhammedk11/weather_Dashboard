@@ -2,20 +2,19 @@ const API_KEY = "63720b5ef05ff5cf6e9a390e4b4d1a9b";
 
 // Get weather
 async function getWeather(city) {
-    try {
-        const url =
-            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error("City not found");
-          }
-        const data = await response.json();
-        return data;
-     } catch (error) {
-       throw error;
-    }
-}
+    const url =
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
 
+    const response = await fetch(url);
+
+    if (!response.ok) {
+        throw new Error("City not found");
+    }
+
+    const data = await response.json();
+
+    return data;
+}
 //Get Forecast
 async function getForecast(city) {
 
@@ -46,7 +45,7 @@ function showForecast(data) {
 
         const date = item.dt_txt.split(" ")[0];
 
-        if (!days.includes(date)&& days.length <5) {
+        if (!days.includes(date)&& days.length<5) {
             days.push(date);
 
             const card =
